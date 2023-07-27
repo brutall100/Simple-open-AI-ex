@@ -1,21 +1,49 @@
-# coc6c4a129f3950a70115e5dc
+Using API very simple example.
 
-Quick start:
+Project Description: This project demonstrates how to use the OpenAI API to generate book recommendations on the topic of coding using Node.js.
 
-```
-$ npm install
-$ npm start
-````
+Prerequisites
+Before running the code, make sure you have the following installed:
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+Node.js (v18.13.0 or compatible version)
+npm (Node Package Manager)
+Setup
+Clone the repository to your local machine.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+Install project dependencies:
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+Copy code
+npm install
+Create a .env file in the root of the project and add your OpenAI API key:
 
-Happy Coding!
+makefile
+Copy code
+OPENAI_API_KEY=your_openai_api_key_here
+Usage
+Run the following command to execute the script:
+
+Copy code
+node app.js
+The script will use the OpenAI API to generate a list of great books to read on the topic of coding. The results will be displayed in the terminal.
+
+Code Explanation
+The app.js file contains the code to interact with the OpenAI API. Here's a brief explanation of what the code does:
+
+Import necessary modules: The code imports the Configuration and OpenAIApi classes from the openai package. It also loads environment variables from the .env file using the dotenv package.
+
+Set up OpenAI configuration: The API key from the .env file is used to set up the Configuration object, which will be used to authenticate API requests.
+
+Define the fetchFactAnswer function: This function sends a request to the OpenAI API to generate book recommendations on the topic of coding. It uses the createCompletion method with the model set to 'text-davinci-003' and the prompt set to a sample prompt asking for book recommendations. The max_tokens and stop options are used to control the response length and stop tokens.
+
+Execute the function: The fetchFactAnswer function is called, and the book recommendations are displayed in the terminal using console.log.
+
+Note: Make sure to replace your_openai_api_key_here in the .env file with your actual OpenAI API key.
+
+Additional Notes
+Remember not to commit the .env file to version control as it contains sensitive information.
+
+If you encounter any issues or have questions, feel free to reach out to the project contributors or OpenAI support.
+
+For more details on using the OpenAI API, refer to the OpenAI documentation.
+
+Enjoy exploring great books on coding!

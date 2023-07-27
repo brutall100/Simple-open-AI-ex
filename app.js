@@ -11,9 +11,9 @@ const openai = new OpenAIApi(configuration);
 async function fetchFactAnswer() {
   const response = await openai.createCompletion({
       model: 'text-davinci-003',
-      prompt: `List some great books to read on the topic of coding.`,
+      prompt: `List some great books to read. `,
       max_tokens: 400,
-      stop: ['2.']
+      stop: ['.2']
   }) 
     // console.log(response.data)
     console.log(response.data.choices[0].text)
