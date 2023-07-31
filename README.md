@@ -15,7 +15,7 @@ Before running this project, you'll need the following:
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/simpleOPEN_AI_ex.git
+git clone https://github.com/brutall100/simpleOPEN_AI_ex.git
 
 
 2. Navigate to the project directory:
